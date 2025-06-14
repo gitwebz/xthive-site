@@ -4,4 +4,5 @@ dj-database-url==2.3.0
 whitenoise==6.8.2
 gunicorn==23.0.0
 Pillow==10.4.0
-crispy-bootstrap5==2024.2  # or crispy_forms==2.1 if using the base package
+crispy-bootstrap5==2024.2
+django-filters==23.5
