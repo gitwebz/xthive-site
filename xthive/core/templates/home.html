@@ -1,0 +1,363 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Xthive - Innovative IT Solutions{% endblock %}
+
+{% block extra_head %}
+    <style>
+        /* Hero Section Styling */
+        .hero-content .logo, .hero-content h1, .hero-content .tagline, .hero-content .btn-primary-left, .hero-content .btn-primary-right {
+            animation: fadeInUp 1s ease-out;
+        }
+        .hero-content .logo {
+            animation-delay: 0.2s; 
+            animation: pulse 1.5s infinite;
+        }
+        .hero-content h1 {
+            animation-delay: 0.4s; 
+            font-size: 4rem;
+        }
+        .hero-content .tagline {
+            animation-delay: 0.6s; 
+            font-size: 2.5rem;
+        }
+        .hero-content .btn-primary-left {
+            animation-delay: 0.8s; 
+            animation: slideInLeft 1s ease-out;
+            transition: all 0.3s ease;
+        }
+        .hero-content .btn-primary-right {
+            animation-delay: 1.0s; 
+            animation: slideInRight 1s ease-out;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 16px rgba(212, 160, 23, 0.5);
+        }
+
+        .hero {
+            background: linear-gradient(to bottom, rgba(13, 74, 78, 0.7), rgba(17, 24, 39, 0.8)), url('{% static "images/hero-bg.jpg" %}') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background-attachment: fixed;
+        }
+
+        .hero-overlay {
+            background: rgba(0, 0, 0, 0.4);
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .hero-content {
+            z-index: 10;
+            color: white;
+            text-align: center;
+            max-width: 900px;
+            padding: 40px;
+        }
+
+        .hero-content h1 {
+            font-weight: bold;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-content .tagline {
+            color: #d4a017; /* Gold for luxury */
+            font-weight: 600;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary-left, .btn-primary-right {
+            background-color: #d4a017;
+            color: #111827;
+            padding: 14px 28px;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .hero-content .logo {
+            width: 150px;
+            margin-bottom: 20px;
+            animation: pulse 1.5s infinite;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(60px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-100px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(100px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #0f766e; /* Same as navbar color */
+            padding: 50px 0;
+            color: white;
+            text-align: center;
+        }
+
+        footer h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        footer p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        footer .social-icons i {
+            font-size: 24px;
+            margin: 0 10px;
+            transition: transform 0.3s;
+        }
+
+        footer .social-icons i:hover {
+            transform: scale(1.2);
+        }
+
+        footer .social-icons {
+            margin-top: 20px;
+        }
+
+        footer .social-icons a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        footer .social-icons i {
+            color: #d4a017; /* Gold color for social icons */
+        }
+
+        /* Navbar Styling */
+        nav {
+            background-color: #0f766e; /* Matching footer color */
+            color: white;
+            padding: 15px 0;
+        }
+
+        .navbar-brand {
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .navbar-nav a {
+            color: white;
+            font-weight: 600;
+            padding: 8px 20px;
+        }
+
+        .navbar-nav a:hover {
+            background-color: #d4a017;
+            color: #111827;
+        }
+
+        /* Section Styling */
+        .section-dark {
+            background-color: #111827;
+            padding: 80px 0;
+            color: white;
+        }
+
+        .section-accent {
+            background-color: #1a2b3b;
+            padding: 80px 0;
+            border-top: 1px solid #374151;
+            border-bottom: 1px solid #374151;
+            color: white;
+        }
+
+        .card {
+            background-color: #1f2937;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .btn-primary {
+            background-color: #d4a017;
+            color: #111827;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 16px rgba(212, 160, 23, 0.5);
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <img src="{% static 'images/logo.png' %}" alt="Xthive Logo" class="logo mx-auto">
+            <h1 class="text-6xl md:text-9xl font-extrabold mb-8 leading-tight">Lead the Digital Revolution</h1>
+            <p class="tagline text-2xl md:text-5xl mb-12 max-w-4xl mx-auto text-center font-semibold">Driven by the Future. Powered by Xthive.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#services" class="btn-primary-left">Explore Services</a>
+                <a href="{% url 'contact' %}" class="btn-primary-right">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section-dark py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12">Our Core Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {% for service in services %}
+                    <div class="card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                        {% if service.icon %}
+                            <i class="fas {{ service.icon }} text-4xl text-gold-600 mb-4"></i>
+                        {% endif %}
+                        <h3 class="text-xl font-semibold mb-2">{{ service.title }}</h3>
+                        <p class="text-sm text-gray-400">{{ service.description|truncatewords:20 }}</p>
+                    </div>
+                {% empty %}
+                    <p class="text-gray-400">No services available.</p>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section-accent py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12">Our Work</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {% for project in portfolio_items %}
+                    <div class="card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                        {% if project.image %}
+                            <img src="{{ project.image.url }}" alt="{{ project.title }}" class="h-48 w-full object-cover rounded-t-lg mb-4">
+                        {% endif %}
+                        <h3 class="text-xl font-semibold mb-2">{{ project.title }}</h3>
+                        <p class="text-sm text-gray-400">{{ project.description|truncatewords:15 }}</p>
+                        <p class="text-xs text-gold-600 mt-2">{{ project.technologies }}</p>
+                        <a href="{% url 'portfolio_detail' project.slug %}" class="btn-primary mt-4 inline-block text-sm">View Project</a>
+                    </div>
+                {% empty %}
+                    <p class="text-gray-400">No projects available.</p>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="section-dark py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12">Client Success Stories</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {% for testimonial in testimonials %}
+                    <div class="card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                        {% if testimonial.client_image %}
+                            <img src="{{ testimonial.client_image.url }}" alt="{{ testimonial.client_name }}" class="h-16 w-16 rounded-full mx-auto mb-4">
+                        {% endif %}
+                        <h3 class="text-lg font-semibold mb-2">{{ testimonial.client_name }}</h3>
+                        <p class="text-sm text-gray-400 mb-2">{{ testimonial.message|truncatewords:15 }}</p>
+                        <p class="text-gold-600 text-sm">Rating: {{ testimonial.rating }}/5</p>
+                        {% if testimonial.company %}
+                            <p class="text-xs text-gray-400 mt-1">{{ testimonial.company }}</p>
+                        {% endif %}
+                    </div>
+                {% empty %}
+                    <p class="text-gray-400">No testimonials available.</p>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section id="clients" class="section-accent py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12">Trusted by Industry Leaders</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                {% for client in clients %}
+                    <div class="card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                        {% if client.logo %}
+                            <img src="{{ client.logo.url }}" alt="{{ client.name }}" class="h-16 mx-auto mb-4">
+                        {% endif %}
+                        <p class="text-sm font-semibold">{{ client.name }}</p>
+                    </div>
+                {% empty %}
+                    <p class="text-gray-400">No clients to display.</p>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section id="stats" class="section-dark py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12">Our Impact</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                {% for stat in stats %}
+                    <div class="card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                        <h3 class="text-3xl font-bold text-gold-600">{{ stat.value }}</h3>
+                        <p class="text-sm text-gray-400">{{ stat.label }}</p>
+                    </div>
+                {% empty %}
+                    <p class="text-gray-400">No stats available.</p>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section id="cta" class="section-accent py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Elevate Your Business?</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto text-gray-400">Join forces with Xthive to harness cutting-edge technology and achieve unparalleled success.</p>
+            <a href="{% url 'contact' %}" class="btn-primary text-xl px-10 py-6">Get in Touch</a>
+        </div>
+    </section>
+
+    <footer>
+        <h3>Xthive - Innovative IT Solutions</h3>
+        <p>Transforming the Future with Cutting-edge Technology</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/xthive" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/xthive" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/company/xthive" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/xthive" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+{% endblock %}

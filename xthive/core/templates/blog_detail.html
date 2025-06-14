@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Xthive - {{ post.title }}{% endblock %}
+
+{% block content %}
+    <section class="section-dark">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-5xl font-bold mb-12 text-yellow-400">{{ post.title }}</h1>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="md:col-span-2">
+                    {% if post.image %}
+                        <img src="{{ post.image.url }}" alt="{{ post.title }}" class="h-64 w-full object-cover rounded mb-6">
+                    {% endif %}
+                    <p class="mb-6">{{ post.content }}</p>
+                    <p class="text-sm text-gray-400">Posted by {{ post.author }} on {{ post.created_at|date:"F d, Y" }}</p>
+                    {% if post.tags %}
+                        <p class="text-sm text-gray-400">Tags: {{ post.tags }}</p>
+                    {% endif %}
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-yellow-400">Recent Posts</h3>
+                    {% for recent_post in posts|slice:":3" %}
+                        <div class="mb-4">
+                            <a href="{% url 'blog_detail' recent_post.slug %}" class="text-yellow-400 hover:text-yellow-500">{{ recent_post.title }}</a>
+                            <p class="text-sm text-gray-400">{{ recent_post.created_at|date:"F d, Y" }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

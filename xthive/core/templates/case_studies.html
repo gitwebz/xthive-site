@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Xthive - Case Studies{% endblock %}
+
+{% block content %}
+    <section class="section-dark">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-12 text-yellow-400">Our Case Studies</h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {% for case_study in case_studies %}
+                    <div class="card">
+                        {% if case_study.image %}
+                            <img src="{{ case_study.image.url }}" alt="{{ case_study.title }}" class="h-48 w-full object-cover rounded mb-4">
+                        {% endif %}
+                        <h3 class="text-2xl font-semibold mb-2 text-yellow-400">{{ case_study.title }}</h3>
+                        <p class="mb-2">{{ case_study.overview|truncatewords:20 }}</p>
+                        <a href="{% url 'case_study_detail' case_study.slug %}" class="btn-primary mt-4 inline-block">Read Case Study</a>
+                    </div>
+                {% empty %}
+                    <p>No case studies available.</p>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}
