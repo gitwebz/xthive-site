@@ -4,7 +4,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'your-secret-key-here'
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'localhost',
+    'xthive.up.railway.app',
+    'xthive.com',
+    'www.xthive.com'
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -74,3 +80,10 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+CSRF_TRUSTED_ORIGINS = [
+    'https://xthive.up.railway.app',
+    'https://xthive.com',
+    'https://www.xthive.com',
+    'http://127.0.0.1:8000',
+    'http://localhost:8000',""
+]
