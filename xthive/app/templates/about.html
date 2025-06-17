@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About - Xthive{% endblock %}
+
+{% block content %}
+    <section class="about-hero" style="position: relative; min-height: 400px; padding: 100px 0; background-color: #777777; text-align: center; color: #fff;">
+        <h1 style="font-size: 3em; font-weight: bold; color: #fff; margin-bottom: 20px;">About Us</h1>
+        <p style="font-size: 1.2em; color: #ccc; max-width: 800px; margin: 0 auto;">Learn more about our journey and commitment to excellence.</p>
+    </section>
+
+    <section class="about-content" style="background-color: #888888; padding: 80px 20px; text-align: center; position: relative; animation: slideIn 1.5s ease-out;">
+        <p style="font-size: 1.2em; color: #ccc; max-width: 800px; margin: 0 auto 40px auto;">Xthive is a London-based tech agency with a passion for innovation, delivering top-notch digital solutions since 2010.</p>
+        <style>
+            @keyframes slideIn {
+                from { transform: translateX(-50px); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+        </style>
+    </section>
+{% endblock %}
+
+{% block footer %}
+    {% include 'footer.html' %}
+{% endblock %}
