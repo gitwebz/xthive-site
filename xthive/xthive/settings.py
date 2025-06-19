@@ -4,13 +4,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'your-secret-key-here'
 DEBUG = True
-# ALLOWED_HOSTS = [
-#     # '127.0.0.1',
-#     # 'localhost',
-#     # 'xthive.up.railway.app',
-#     # 'xthive.com',
-#     # 'www.xthive.com'
-# ]
+ALLOWED_HOSTS = [
+    # '127.0.0.1',
+    # 'localhost',
+    # 'xthive.up.railway.app',
+    # 'xthive.com',
+    # 'www.xthive.com'
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
