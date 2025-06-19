@@ -176,3 +176,501 @@
 {% block footer %}
     <!-- Footer remains as per the previous detailed version -->
 {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home - Xthive{% endblock %}
+
+{% block content %}
+    <section class="hero" style="position: relative; min-height: 450px; padding: 120px 0; overflow: hidden; color: #fff; width: 100%; background-color: #1a2a44;">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;">
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center top; background-size: cover; opacity: 0.4; filter: brightness(0.7);"></div>
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle, rgba(255, 153, 0, 0.1) 0%, rgba(26, 42, 68, 0.9) 70%); z-index: -1;"></div>
+        </div>
+        <div style="position: relative; z-index: 1; text-align: left; max-width: 600px; margin-left: 50px; animation: fadeIn 2s ease-out;">
+            <h1 style="font-size: 2.5em; font-weight: bold; color: #fff; text-transform: uppercase; margin-bottom: 20px;">Driven by the Future. Powered by Xthive</h1>
+            <p style="font-size: 1.3em; color: #ccc; line-height: 1.6; margin-bottom: 40px;">We are an award-winning tech agency specializing in cutting-edge digital solutions, including custom website design, web development, Python, E-commerce, WordPress, Django, Shopify, and SEO services tailored to your business needs.</p>
+            <p style="font-size: 1.2em; color: #ccda08d9; font-weight: bold; margin-bottom: 20px;">Tech Solutions</p>
+        </div>
+        <div style="position: absolute; top: 50%; right: 50px; transform: translateY(-50%); text-align: right; z-index: 2;">
+            <div style="display: flex; justify-content: flex-end; gap: 20px; margin-bottom: 20px;">
+                <div style="text-align: center;">
+                    <img src="https://img.icons8.com/ios-filled/50/ff9900/globe.png" alt="Website Design" style="width: 50px; animation: pulse 2s infinite;">
+                    <p style="font-size: 0.9em; color: #ccc; margin-top: 5px;">Website Design</p>
+                </div>
+                <div style="text-align: center;">
+                    <img src="https://img.icons8.com/ios-filled/50/ff9900/code.png" alt="Web Development" style="width: 50px; animation: pulse 2s infinite;">
+                    <p style="font-size: 0.9em; color: #ccc; margin-top: 5px;">Web Development</p>
+                </div>
+                <div style="text-align: center;">
+                    <img src="https://img.icons8.com/ios-filled/50/ff9900/shopping-cart.png" alt="E-commerce" style="width: 50px; animation: pulse 2s infinite;">
+                    <p style="font-size: 0.9em; color: #ccc; margin-top: 5px;">E-commerce</p>
+                </div>
+                <div style="text-align: center;">
+                    <img src="https://img.icons8.com/ios-filled/50/ff9900/wordpress.png" alt="WordPress" style="width: 50px; animation: pulse 2s infinite;">
+                    <p style="font-size: 0.9em; color: #ccc; margin-top: 5px;">WordPress</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="#" class="btn" style="background-color: #ffcc00; color: #000; padding: 15px 30px; text-decoration: none; font-weight: bold; font-size: 1.2em; border-radius: 5px; display: inline-block; transition: all 0.3s ease;">Discover Our Services</a>
+            </div>
+        </div>
+        <style>
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+            @keyframes pulse {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.1); }
+                100% { transform: scale(1); }
+            }
+            .btn:hover {
+                background-color: #e6b800;
+                transform: scale(1.05);
+            }
+        </style>
+    </section>
+
+    <section class="high-performance bg-[#0a0909] py-20 px-4 md:px-10 lg:px-20 text-left relative overflow-hidden" style="animation: slideUp 1.5s ease-out; background-color: #0a0909 !important; border-top: 1px solid #1a2a44;">
+        <span class="text-[#ffcc00] text-base font-medium block mb-2">- Where Functionality Fuels Success</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">High-Performance Website Development Services in Lahore</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div class="lg:pr-8">
+                <p class="text-lg text-gray-300 mb-4 leading-relaxed">
+                    Our web development skills address the key tools for presenting, moving, storing and using data and information digitally to assist an organisation with its decision making, communication and to add value to its share and stakeholders.
+                </p>
+                <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+                    Our web development services in London focus on integrating business functions with the world of the digital environment we work, live and operate in. We offer Web Development, Multimedia and Human Computer Interaction, Mobile Applications, Technological Innovation and Cyber Defence as well as exploring current trends in business.
+                </p>
+            </div>
+            <div class="flex flex-row lg:flex-row gap-6">
+                <img src="{% static 'images/developer1.webp' %}" alt="Developer 1" class="w-full lg:w-[280px] h-[320px] object-cover rounded-lg">
+                <img src="{% static 'images/developer2.webp' %}" alt="Developer 2" class="w-full lg:w-[280px] h-[320px] object-cover rounded-lg">
+            </div>
+        </div>
+        <div class="text-center mt-10">
+            <a href="#" class="btn inline-block bg-[#ffcc00] text-black font-bold text-lg py-3 px-6 rounded-lg transition-all duration-300 hover:bg-[#e6b800] hover:scale-105">Learn More</a>
+        </div>
+        <style>
+            @keyframes slideUp {
+                from { transform: translateY(50px); opacity: 0; }
+                to { transform: translateY(0); opacity: 1; }
+            }
+            .high-performance::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: radial-gradient(circle at 20% 20%, rgba(255, 98, 0, 0.1), transparent 70%), url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFElEQVQIW2NkYGD4z8DAwMjAxcHDwMPAwMDFwMHExMCExMTExMTEwMDExMTEwMDAwMDExMTExMTEwMDAwMDExMTExMTIwMDAwMDExMTExMTIwMDAwMDExMTExMTIwMDAwMDExMTExMTIwMDACAAQAAgAGbU9W/AAAAAElFTkSuQmCC') repeat;
+                opacity: 0.2;
+                z-index: -1;
+            }
+        </style>
+    </section>
+
+    <section class="bg-[#121212] py-16 px-4 md:px-10 lg:px-20">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold">Where Innovation Meets <span class="text-[#ffcc00]">Technology</span></h2>
+            <p class="mt-4 text-lg text-gray-300">
+                Technologies & Tools we use in Our Services to Design & Develop
+            </p>
+        </div>
+
+        <!-- 4 Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+            <!-- Card 1 -->
+            <div class="bg-[#1c1c1c] rounded-xl shadow-md p-4">
+                <img src="https://www.londonwebsitedesignservices.com/images/web-design-london-.webp" alt="Web Design" class="rounded-md mb-4 w-full h-40 object-cover">
+                <h3 class="text-lg font-semibold mb-2 border-b border-gray-600 pb-2">Web Design</h3>
+                <ul class="text-sm space-y-1 mt-2 list-disc list-inside text-gray-300">
+                    <li>HTML5</li>
+                    <li>WordPress</li>
+                    <li>React</li>
+                    <li>WooCommerce</li>
+                    <li>Shopify</li>
+                </ul>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-[#1c1c1c] rounded-xl shadow-md p-4">
+                <img src="https://www.londonwebsitedesignservices.com/images/web-development-services.webp" alt="Web Development" class="rounded-md mb-4 w-full h-40 object-cover">
+                <h3 class="text-lg font-semibold mb-2 border-b border-gray-600 pb-2">Web Development</h3>
+                <ul class="text-sm space-y-1 mt-2 list-disc list-inside text-gray-300">
+                    <li>PHP Development</li>
+                    <li>Nodejs Development</li>
+                    <li>Python Development</li>
+                    <li>CodeIgniter Development</li>
+                    <li>Laravel Development</li>
+                </ul>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-[#1c1c1c] rounded-xl shadow-md p-4">
+                <img src="https://www.londonwebsitedesignservices.com/images/ecommerce-website-design.webp" alt="CMS & Ecommerce" class="rounded-md mb-4 w-full h-40 object-cover">
+                <h3 class="text-lg font-semibold mb-2 border-b border-gray-600 pb-2">CMS & Ecommerce</h3>
+                <ul class="text-sm space-y-1 mt-2 list-disc list-inside text-gray-300">
+                    <li>WordPress Development</li>
+                    <li>WooCommerce</li>
+                    <li>Opencart Development</li>
+                    <li>Shopify Development</li>
+                    <li>E-Commerce Development</li>
+                </ul>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-[#1c1c1c] rounded-xl shadow-md p-4">
+                <img src="https://www.londonwebsitedesignservices.com/images/digital-marketing-agency-london.webp" alt="Digital Marketing" class="rounded-md mb-4 w-full h-40 object-cover">
+                <h3 class="text-lg font-semibold mb-2 border-b border-gray-600 pb-2">Digital Marketing</h3>
+                <ul class="text-sm space-y-1 mt-2 list-disc list-inside text-gray-300">
+                    <li>SEO Services</li>
+                    <li>SMO Services</li>
+                    <li>PPC Campaign</li>
+                    <li>Content Marketing</li>
+                    <li>Email Marketing</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Flowing Animated Icons -->
+        <div class="relative overflow-hidden h-20">
+            <div class="absolute whitespace-nowrap animate-flow flex gap-10 items-center">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-10 h-10" alt="HTML5">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-10 h-10" alt="CSS3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-10 h-10" alt="JavaScript">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-10 h-10" alt="React">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-10 h-10" alt="Python">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="w-10 h-10" alt="PHP">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" class="w-10 h-10" alt="WordPress">
+                <!-- Duplicate icons for seamless loop -->
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-10 h-10" alt="HTML5">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-10 h-10" alt="CSS3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-10 h-10" alt="JavaScript">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-10 h-10" alt="React">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-10 h-10" alt="Python">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="w-10 h-10" alt="PHP">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" class="w-10 h-10" alt="WordPress">
+            </div>
+        </div>
+    </section>
+
+    <style>
+        @keyframes flow {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+        .animate-flow {
+            animation: flow 25s linear infinite;
+        }
+    </style>
+
+{% endblock %}
+
+{% block footer %}
+    {% include 'footer.html' %}
+
+{% endblock %}
+----------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home - Xthive{% endblock %}
+
+{% block content %}
+    <section class="hero relative min-h-[450px] py-24 bg-[#1a2a44]">
+        <div class="absolute inset-0 bg-cover bg-center opacity-40 filter brightness-[0.7]" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="relative z-10 container mx-auto px-4 md:px-8">
+            <div class="max-w-[600px] text-left animate-fadeIn">
+                <h1 class="text-3xl md:text-4xl font-bold text-white mb-6">Driven by the Future. Powered by Xthive</h1>
+                <p class="text-lg text-gray-300 mb-8">We are an award-winning tech agency specializing in cutting-edge digital solutions, including custom website design, web development, Python, E-commerce, WordPress, Django, Shopify, and SEO services tailored to your business needs.</p>
+                <p class="text-xl text-[#e6b800] font-bold">Tech Solutions</p>
+            </div>
+            <div class="text-right mt-8 md:mt-0">
+                <div class="flex justify-end gap-6 mb-8">
+                    <div class="text-center">
+                        <img src="https://img.icons8.com/ios-filled/50/ff9900/globe.png" alt="Website Design" class="w-12 animate-pulse">
+                        <p class="text-sm text-gray-300 mt-3">Website Design</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="https://img.icons8.com/ios-filled/50/ff9900/code.png" alt="Web Development" class="w-12 animate-pulse">
+                        <p class="text-sm text-gray-300 mt-3">Web Development</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="https://img.icons8.com/ios-filled/50/ff9900/shopping-cart.png" alt="E-commerce" class="w-12 animate-pulse">
+                        <p class="text-sm text-gray-300 mt-3">E-commerce</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="https://img.icons8.com/ios-filled/50/ff9900/wordpress.png" alt="WordPress" class="w-12 animate-pulse">
+                        <p class="text-sm text-gray-300 mt-3">WordPress</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="#" class="inline-block bg-[#ffcc00] text-black py-3 px-8 rounded-lg text-lg transition-all duration-300 hover:bg-[#e6b800] hover:scale-105">Discover Our Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="high-performance bg-[#0a0909] py-20 px-4 md:px-10 lg:px-20 text-left relative overflow-hidden" style="animation: slideUp 1.5s ease-out;">
+        <span class="text-[#ffcc00] text-base font-medium block mb-2">- Where Functionality Fuels Success</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">High-Performance Website Development Services in Lahore</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mx-auto max-w-6xl">
+            <div class="lg:pr-8">
+                <p class="text-lg text-gray-300 mb-4 leading-relaxed">
+                    Our web development skills address the key tools for presenting, moving, storing, and using data and information digitally to assist an organisation with its decision making, communication and to add value to its share and stakeholders.
+                </p>
+                <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+                    Our web development services in London focus on integrating business functions with the world of the digital environment we work, live and operate in. We offer Web Development, Multimedia and Human Computer Interaction, Mobile Applications, Technological Innovation and Cyber Defence as well as exploring current trends in business.
+                </p>
+            </div>
+            <div class="flex gap-6 flex-wrap justify-center md:justify-start">
+                <img src="{% static 'images/developer1.webp' %}" alt="Developer 1" class="w-full lg:w-[280px] h-[320px] object-cover rounded-lg mb-4">
+                <img src="{% static 'images/developer2.webp' %}" alt="Developer 2" class="w-full lg:w-[280px] h-[320px] object-cover rounded-lg mb-4">
+            </div>
+        </div>
+        <div class="text-center mt-10">
+            <a href="#" class="inline-block bg-[#ffcc00] text-black font-bold text-lg py-3 px-6 rounded-lg transition-all duration-300 hover:bg-[#e6b800] hover:scale-105">Learn More</a>
+        </div>
+    </section>
+
+    <section class="bg-[#121212] py-16 px-4 md:px-10 lg:px-20">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold">Where Innovation Meets <span class="text-[#ffcc00]">Technology</span></h2>
+            <p class="mt-4 text-lg text-gray-300">Technologies & Tools we use in Our Services to Design & Develop</p>
+        </div>
+
+        <!-- 4 Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+            <!-- Card 1 -->
+            <div class="bg-[#1c1c1c] rounded-xl shadow-md p-6">
+                <img src="https://www.londonwebsitedesignservices.com/images/web-design-london-.webp" alt="Web Design" class="rounded-md mb-4 w-full h-40 object-cover">
+                <h3 class="text-lg font-semibold mb-2 border-b border-gray-600 pb-2">Web Design</h3>
+                <ul class="text-sm space-y-1 mt-2 list-disc list-inside text-gray-300">
+                    <li>HTML5</li>
+                    <li>WordPress</li>
+                    <li>React</li>
+                    <li>WooCommerce</li>
+                    <li>Shopify</li>
+                </ul>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-[#1c1c1c] rounded-xl shadow-md p-6">
+                <img src="https://www.londonwebsitedesignservices.com/images/web-development-services.webp" alt="Web Development" class="rounded-md mb-4 w-full h-40 object-cover">
+                <h3 class="text-lg font-semibold mb-2 border-b border-gray-600 pb-2">Web Development</h3>
+                <ul class="text-sm space-y-1 mt-2 list-disc list-inside text-gray-300">
+                    <li>PHP Development</li>
+                    <li>Nodejs Development</li>
+                    <li>Python Development</li>
+                    <li>CodeIgniter Development</li>
+                    <li>Laravel Development</li>
+                </ul>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-[#1c1c1c] rounded-xl shadow-md p-6">
+                <img src="https://www.londonwebsitedesignservices.com/images/ecommerce-website-design.webp" alt="CMS & Ecommerce" class="rounded-md mb-4 w-full h-40 object-cover">
+                <h3 class="text-lg font-semibold mb-2 border-b border-gray-600 pb-2">CMS & Ecommerce</h3>
+                <ul class="text-sm space-y-1 mt-2 list-disc list-inside text-gray-300">
+                    <li>WordPress Development</li>
+                    <li>WooCommerce</li>
+                    <li>Opencart Development</li>
+                    <li>Shopify Development</li>
+                    <li>E-Commerce Development</li>
+                </ul>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-[#1c1c1c] rounded-xl shadow-md p-6">
+                <img src="https://www.londonwebsitedesignservices.com/images/digital-marketing-agency-london.webp" alt="Digital Marketing" class="rounded-md mb-4 w-full h-40 object-cover">
+                <h3 class="text-lg font-semibold mb-2 border-b border-gray-600 pb-2">Digital Marketing</h3>
+                <ul class="text-sm space-y-1 mt-2 list-disc list-inside text-gray-300">
+                    <li>SEO Services</li>
+                    <li>SMO Services</li>
+                    <li>PPC Campaign</li>
+                    <li>Content Marketing</li>
+                    <li>Email Marketing</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Flowing Animated Icons -->
+        <div class="relative overflow-hidden h-20">
+            <div class="absolute whitespace-nowrap animate-flow flex gap-10 items-center">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-10 h-10" alt="HTML5">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-10 h-10" alt="CSS3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-10 h-10" alt="JavaScript">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-10 h-10" alt="React">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-10 h-10" alt="Python">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="w-10 h-10" alt="PHP">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" class="w-10 h-10" alt="WordPress">
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#0f0f0f] py-20 px-4 md:px-10 lg:px-20 border-t border-[#1a2a44]">
+        <div class="text-center mb-14">
+            <h2 class="text-3xl md:text-4xl font-bold text-white">Why <span class="text-[#ffcc00]">Choose Us</span></h2>
+            <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">At Xthive, we don't just deliver projects — we build partnerships. Here’s what sets us apart in the digital world.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
+            <!-- Card 1 -->
+            <div class="bg-[#1c1c1c] rounded-xl p-6 shadow-lg hover:shadow-[#ffcc00]/50 transition duration-300">
+                <img src="https://img.icons8.com/ios-filled/50/ffcc00/medal.png" alt="Award Winning" class="mx-auto mb-4 w-12 h-12">
+                <h3 class="text-xl font-semibold text-white mb-2">Award-Winning Quality</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Recognized by clients and platforms for delivering exceptional web and software solutions.</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-[#1c1c1c] rounded-xl p-6 shadow-lg hover:shadow-[#ffcc00]/50 transition duration-300">
+                <img src="https://img.icons8.com/ios-filled/50/ffcc00/futurama-bender.png" alt="Tech Expertise" class="mx-auto mb-4 w-12 h-12">
+                <h3 class="text-xl font-semibold text-white mb-2">Cutting-Edge Technology</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">We blend modern tools like React, Python, Django, and AI to keep your brand future-ready.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-[#1c1c1c] rounded-xl p-6 shadow-lg hover:shadow-[#ffcc00]/50 transition duration-300">
+                <img src="https://img.icons8.com/ios-filled/50/ffcc00/handshake.png" alt="Client Focused" class="mx-auto mb-4 w-12 h-12">
+                <h3 class="text-xl font-semibold text-white mb-2">Client-Centric Approach</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">We prioritize your vision and ensure a seamless experience from ideation to launch.</p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-[#1c1c1c] rounded-xl p-6 shadow-lg hover:shadow-[#ffcc00]/50 transition duration-300">
+                <img src="https://img.icons8.com/ios-filled/50/ffcc00/speed.png" alt="Performance" class="mx-auto mb-4 w-12 h-12">
+                <h3 class="text-xl font-semibold text-white mb-2">Performance Driven</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">We craft fast, scalable, and SEO-optimized websites that convert and perform under pressure.</p>
+            </div>
+        </div>
+
+        <div class="text-center mt-12">
+            <a href="#" class="inline-block bg-[#ffcc00] text-black font-bold text-lg py-3 px-8 rounded-lg transition duration-300 hover:bg-[#e6b800] hover:scale-105">Let’s Work Together</a>
+        </div>
+    </section>
+
+    <section class="projects bg-[#0a0909] py-16 px-4 md:px-10 lg:px-20 text-center relative overflow-hidden">
+        <span class="text-[#ffcc00] text-base font-medium block mb-2">- Our Success Stories</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Projects That Define Excellence</h2>
+        <p class="text-lg text-gray-300 mb-12 max-w-2xl mx-auto">From e-commerce platforms to custom web apps, our work drives business growth and innovation.</p>
+        <div class="relative max-w-6xl mx-auto">
+            <div class="overflow-hidden">
+                <div class="project-slider grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Cards -->
+                    <div class="bg-[#1c1c1c] rounded-xl shadow-md p-4 hover:scale-105 transition-transform duration-300">
+                        <img src="{% static 'images/p1.jpg' %}" alt="Project 1" class="w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="text-lg font-semibold text-white mb-2">E-commerce Platform for XYZ</h3>
+                        <p class="text-sm text-gray-300 mb-4">Built with Shopify & React for seamless shopping.</p>
+                        <a href="#" class="text-[#ffcc00] font-bold text-sm hover:underline">View Case Study</a>
+                    </div>
+                    <!-- More project cards can go here -->
+                </div>
+            </div>
+        </div>
+        <div class="mt-12">
+            <h3 class="text-xl font-semibold text-white mb-6">Trusted By</h3>
+            <div class="flex justify-center gap-8 flex-wrap">
+                <img src="{% static 'images/p1.jpg' %}" alt="Client 1" class="h-12 opacity-70 hover:opacity-100 transition-opacity">
+                <!-- More client logos here -->
+            </div>
+        </div>
+        <div class="text-center mt-10">
+            <a href="#" class="btn inline-block bg-[#ffcc00] text-black font-bold text-lg py-3 px-6 rounded-lg transition-all duration-300 hover:bg-[#e6b800] hover:scale-105">Explore Our Portfolio</a>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block footer %}
+    {% include 'footer.html' %}
+{% endblock %}
