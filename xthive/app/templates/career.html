@@ -4,27 +4,89 @@
 {% block title %}Career - Xthive{% endblock %}
 
 {% block content %}
-    <section class="career-hero" style="position: relative; min-height: 400px; padding: 100px 0; background-color: #555555; text-align: center; color: #fff;">
-        <h1 style="font-size: 3em; font-weight: bold; color: #fff; margin-bottom: 20px;">Careers</h1>
-        <p style="font-size: 1.2em; color: #ccc; max-width: 800px; margin: 0 auto;">Join our team of innovators and creators.</p>
-    </section>
+<!-- Hero Section -->
+<section class="hero relative min-h-[450px] py-10 md:py-20 overflow-hidden text-white bg-[#1a2a44]">
+    <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-no-repeat bg-center bg-cover opacity-40 brightness-75"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle,rgba(255,153,0,0.1)_0%,rgba(26,42,68,0.9)_70%)] z-[-1]"></div>
+    </div>
+    <div class="container mx-auto px-4 md:px-8 text-center relative z-10">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold uppercase mb-5 text-white animate-fadeIn">Careers at Xthive</h1>
+        <p class="text-lg sm:text-xl md:text-2xl text-gray-300 leading-relaxed mb-8 max-w-2xl mx-auto">Join our team of innovators and shape the future of technology.</p>
+    </div>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .animate-fadeIn {
+            animation: fadeIn 2s ease-out;
+        }
+    </style>
+</section>
 
-    <section class="career-opportunities" style="background-color: #666666; padding: 80px 20px; text-align: center; position: relative; animation: slideUp 1.5s ease-out;">
-        <p style="font-size: 1.2em; color: #ccc; max-width: 800px; margin: 0 auto 40px auto;">Explore current openings and apply today.</p>
-        <a href="#" class="btn" style="background-color: #ffcc00; color: #000; padding: 12px 25px; text-decoration: none; font-weight: bold; font-size: 1.1em; border-radius: 5px; transition: all 0.3s ease;">View Openings</a>
-        <style>
-            @keyframes slideUp {
-                from { transform: translateY(50px); opacity: 0; }
-                to { transform: translateY(0); opacity: 1; }
-            }
-            .btn:hover {
-                background-color: #e6b800;
-                transform: scale(1.05);
-            }
-        </style>
-    </section>
+<!-- Job Listings Section -->
+<section class="bg-[#0a0909] py-16 px-4 md:px-10 lg:px-20 border-t border-[#1a2a44]">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-12 text-center">Current Openings</h2>
+        <div class="grid grid-cols-1 gap-6">
+            <!-- Job 1 -->
+            <div class="bg-[#1c1c1c] rounded-xl p-6 shadow-md hover:shadow-[#ffcc00]/50 transition duration-300">
+                <h3 class="text-xl font-semibold text-white mb-2">Senior Web Developer</h3>
+                <p class="text-gray-300 text-sm mb-4">Full-time | London, UK</p>
+                <p class="text-gray-300 text-base mb-4">We’re looking for a skilled developer proficient in Django, React, and Node.js to lead complex projects.</p>
+                <a href="#" class="text-[#ffcc00] font-bold text-sm hover:underline">Apply Now</a>
+            </div>
+            <!-- Job 2 -->
+            <div class="bg-[#1c1c1c] rounded-xl p-6 shadow-md hover:shadow-[#ffcc00]/50 transition duration-300">
+                <h3 class="text-xl font-semibold text-white mb-2">UI/UX Designer</h3>
+                <p class="text-gray-300 text-sm mb-4">Part-time | Remote</p>
+                <p class="text-gray-300 text-base mb-4">Design intuitive and visually stunning interfaces for our web and mobile applications.</p>
+                <a href="#" class="text-[#ffcc00] font-bold text-sm hover:underline">Apply Now</a>
+            </div>
+            <!-- Job 3 -->
+            <div class="bg-[#1c1c1c] rounded-xl p-6 shadow-md hover:shadow-[#ffcc00]/50 transition duration-300">
+                <h3 class="text-xl font-semibold text-white mb-2">Digital Marketing Specialist</h3>
+                <p class="text-gray-300 text-sm mb-4">Full-time | London, UK</p>
+                <p class="text-gray-300 text-base mb-4">Drive our clients’ success with SEO, PPC, and content marketing strategies.</p>
+                <a href="#" class="text-[#ffcc00] font-bold text-sm hover:underline">Apply Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="bg-[#121212] py-16 px-4 md:px-10 lg:px-20">
+    <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">Why Work With Us?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-[#1c1c1c] rounded-xl p-6 shadow-md">
+                <img src="https://img.icons8.com/ios-filled/50/ffcc00/briefcase.png" alt="Growth" class="mx-auto mb-4 w-12 h-12">
+                <h3 class="text-lg font-semibold text-white mb-2">Career Growth</h3>
+                <p class="text-gray-300 text-sm">Access training and mentorship to advance your skills.</p>
+            </div>
+            <div class="bg-[#1c1c1c] rounded-xl p-6 shadow-md">
+                <img src="https://img.icons8.com/ios-filled/50/ffcc00/globe.png" alt="Global" class="mx-auto mb-4 w-12 h-12">
+                <h3 class="text-lg font-semibold text-white mb-2">Global Projects</h3>
+                <p class="text-gray-300 text-sm">Work on impactful projects for international clients.</p>
+            </div>
+            <div class="bg-[#1c1c1c] rounded-xl p-6 shadow-md">
+                <img src="https://img.icons8.com/ios-filled/50/ffcc00/users.png" alt="Culture" class="mx-auto mb-4 w-12 h-12">
+                <h3 class="text-lg font-semibold text-white mb-2">Inclusive Culture</h3>
+                <p class="text-gray-300 text-sm">Join a diverse and collaborative team environment.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="bg-[#1a2a44] py-16 px-4 md:px-10 lg:px-20 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Join Us?</h2>
+    <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">Explore opportunities and start your journey with Xthive today.</p>
+    <a href="#" class="inline-block bg-[#ffcc00] text-black font-bold text-lg py-3 px-8 rounded-lg transition duration-300 hover:bg-[#e6b800] hover:scale-105">View All Openings</a>
+</section>
 {% endblock %}
-
 {% block footer %}
     {% include 'footer.html' %}
+
 {% endblock %}

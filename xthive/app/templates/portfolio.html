@@ -4,39 +4,120 @@
 {% block title %}Portfolio - Xthive{% endblock %}
 
 {% block content %}
-    <section class="portfolio-hero" style="position: relative; min-height: 400px; padding: 100px 0; background-color: #404040; text-align: center; color: #fff;">
-        <h1 style="font-size: 3em; font-weight: bold; color: #fff; margin-bottom: 20px;">Our Portfolio</h1>
-        <p style="font-size: 1.2em; color: #ccc; max-width: 800px; margin: 0 auto;">Showcasing our best projects that highlight our expertise and creativity.</p>
-    </section>
+<!-- Hero Section -->
+<section class="hero relative min-h-[450px] py-10 md:py-20 overflow-hidden text-white bg-[#1a2a44]">
+    <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-no-repeat bg-center bg-cover opacity-40 brightness-75"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle,rgba(255,153,0,0.1)_0%,rgba(26,42,68,0.9)_70%)] z-[-1]"></div>
+    </div>
+    <div class="container mx-auto px-4 py-20 md:px-8 text-center relative z-10">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold uppercase mb-5 text-white animate-fadeIn">Our Portfolio</h1>
+        <p class="text-lg sm:text-xl md:text-2xl text-gray-300 leading-relaxed mb-8 max-w-2xl mx-auto">Explore our diverse range of projects showcasing creativity and technical expertise.</p>
+    </div>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .animate-fadeIn {
+            animation: fadeIn 2s ease-out;
+        }
+    </style>
+</section>
 
-    <section class="portfolio-list" style="background-color: #4a4a4a; padding: 80px 20px; text-align: center; position: relative; animation: slideUp 1.5s ease-out;">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
-                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="Project 1" style="width: 300px; height: 200px; object-fit: cover; border-radius: 10px;">
-                <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="Project 2" style="width: 300px; height: 200px; object-fit: cover; border-radius: 10px;">
-                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf0d106?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="Project 3" style="width: 300px; height: 200px; object-fit: cover; border-radius: 10px;">
-            </div>
+<!-- Portfolio Filters -->
+<section class="bg-[#0a0909] py-16 px-4 md:px-10 lg:px-20 border-t border-[#1a2a44]">
+    <div class="max-w-6xl mx-auto text-center mb-12">
+        <h2 class="text-3xl font-bold text-white mb-6">Our Work</h2>
+        <div class="flex justify-center gap-4 flex-wrap">
+            <button class="bg-[#ffcc00] text-black px-4 py-2 rounded-lg hover:bg-[#e6b800] transition" data-filter="all">All</button>
+            <button class="bg-[#1c1c1c] text-gray-300 px-4 py-2 rounded-lg hover:bg-[#ffcc00] hover:text-black transition" data-filter="web">Web Development</button>
+            <button class="bg-[#1c1c1c] text-gray-300 px-4 py-2 rounded-lg hover:bg-[#ffcc00] hover:text-black transition" data-filter="ecommerce">E-commerce</button>
+            <button class="bg-[#1c1c1c] text-gray-300 px-4 py-2 rounded-lg hover:bg-[#ffcc00] hover:text-black transition" data-filter="mobile">Mobile Apps</button>
         </div>
-        <style>
-            @keyframes slideUp {
-                from { transform: translateY(50px); opacity: 0; }
-                to { transform: translateY(0); opacity: 1; }
-            }
-            .portfolio-list::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: linear-gradient(to right, #4a4a4a, #555555);
-                opacity: 0.1;
-                z-index: -1;
-            }
-        </style>
-    </section>
-{% endblock %}
+    </div>
 
+    <!-- Portfolio Grid -->
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project 1 -->
+        <div class="bg-[#1c1c1c] rounded-xl shadow-md p-4 hover:scale-105 transition-transform duration-300" data-category="ecommerce">
+            <img src="{% static 'images/p1.jpg' %}" alt="Project 1" class="w-full h-48 object-cover rounded-md mb-4">
+            <h3 class="text-lg font-semibold text-white mb-2">E-commerce Platform for XYZ</h3>
+            <p class="text-sm text-gray-300 mb-4">Built with Shopify & React for seamless shopping.</p>
+            <a href="#" class="text-[#ffcc00] font-bold text-sm hover:underline">View Case Study</a>
+        </div>
+        <!-- Project 2 -->
+        <div class="bg-[#1c1c1c] rounded-xl shadow-md p-4 hover:scale-105 transition-transform duration-300" data-category="web">
+            <img src="{% static 'images/p2.jpg' %}" alt="Project 2" class="w-full h-48 object-cover rounded-md mb-4">
+            <h3 class="text-lg font-semibold text-white mb-2">Corporate Website for ABC</h3>
+            <p class="text-sm text-gray-300 mb-4">Crafted with Django & WordPress for scalability.</p>
+            <a href="#" class="text-[#ffcc00] font-bold text-sm hover:underline">View Case Study</a>
+        </div>
+        <!-- Project 3 -->
+        <div class="bg-[#1c1c1c] rounded-xl shadow-md p-4 hover:scale-105 transition-transform duration-300" data-category="mobile">
+            <img src="{% static 'images/p3.jpeg' %}" alt="Project 3" class="w-full h-48 object-cover rounded-md mb-4">
+            <h3 class="text-lg font-semibold text-white mb-2">Mobile App for DEF</h3>
+            <p class="text-sm text-gray-300 mb-4">Developed with React Native & Python.</p>
+            <a href="#" class="text-[#ffcc00] font-bold text-sm hover:underline">View Case Study</a>
+        </div>
+        <!-- Project 4 -->
+        <div class="bg-[#1c1c1c] rounded-xl shadow-md p-4 hover:scale-105 transition-transform duration-300" data-category="web">
+            <img src="{% static 'images/p4.png' %}" alt="Project 4" class="w-full h-48 object-cover rounded-md mb-4">
+            <h3 class="text-lg font-semibold text-white mb-2">Web App for GHI</h3>
+            <p class="text-sm text-gray-300 mb-4">Powered by Laravel & Vue.js for efficiency.</p>
+            <a href="#" class="text-[#ffcc00] font-bold text-sm hover:underline">View Case Study</a>
+        </div>
+        <!-- Project 5 -->
+        <div class="bg-[#1c1c1c] rounded-xl shadow-md p-4 hover:scale-105 transition-transform duration-300" data-category="ecommerce">
+            <img src="{% static 'images/p5.png' %}" alt="Project 5" class="w-full h-48 object-cover rounded-md mb-4">
+            <h3 class="text-lg font-semibold text-white mb-2">E-learning Platform for JKL</h3>
+            <p class="text-sm text-gray-300 mb-4">Built with Node.js & React for interactivity.</p>
+            <a href="#" class="text-[#ffcc00] font-bold text-sm hover:underline">View Case Study</a>
+        </div>
+        <!-- Project 6 -->
+        <div class="bg-[#1c1c1c] rounded-xl shadow-md p-4 hover:scale-105 transition-transform duration-300" data-category="web">
+            <img src="{% static 'images/p6.png' %}" alt="Project 6" class="w-full h-48 object-cover rounded-md mb-4">
+            <h3 class="text-lg font-semibold text-white mb-2">Portfolio Site for MNO</h3>
+            <p class="text-sm text-gray-300 mb-4">Designed with WordPress & Tailwind CSS.</p>
+            <a href="#" class="text-[#ffcc00] font-bold text-sm hover:underline">View Case Study</a>
+        </div>
+        <!-- Project 7 -->
+        <div class="bg-[#1c1c1c] rounded-xl shadow-md p-4 hover:scale-105 transition-transform duration-300" data-category="web">
+            <img src="{% static 'images/p7.png' %}" alt="Project 7" class="w-full h-48 object-cover rounded-md mb-4">
+            <h3 class="text-lg font-semibold text-white mb-2">CRM System for PQR</h3>
+            <p class="text-sm text-gray-300 mb-4">Developed with Django & Vue.js for efficiency.</p>
+            <a href="#" class="text-[#ffcc00] font-bold text-sm hover:underline">View Case Study</a>
+        </div>
+    </div>
+    <script>
+        const filterButtons = document.querySelectorAll('[data-filter]');
+        const portfolioItems = document.querySelectorAll('[data-category]');
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.getAttribute('data-filter');
+                portfolioItems.forEach(item => {
+                    const category = item.getAttribute('data-category');
+                    if (filter === 'all' || category === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                filterButtons.forEach(btn => btn.classList.remove('bg-[#ffcc00]', 'text-black'));
+                button.classList.add('bg-[#ffcc00]', 'text-black');
+            });
+        });
+    </script>
+</section>
+
+<!-- Call to Action -->
+<section class="bg-[#1a2a44] py-16 px-4 md:px-10 lg:px-20 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Inspired by Our Work?</h2>
+    <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">Let’s create something extraordinary together.</p>
+    <a href="{% url 'contact' %}" class="inline-block bg-[#ffcc00] text-black font-bold text-lg py-3 px-8 rounded-lg transition duration-300 hover:bg-[#e6b800] hover:scale-105">Start Your Project</a>
+</section>
+{% endblock %}
 {% block footer %}
     {% include 'footer.html' %}
+
 {% endblock %}

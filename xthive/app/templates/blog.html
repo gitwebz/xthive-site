@@ -4,44 +4,82 @@
 {% block title %}Blogs - Xthive{% endblock %}
 
 {% block content %}
-    <section class="blogs-hero" style="position: relative; min-height: 400px; padding: 100px 0; background-color: #555555; text-align: center; color: #fff;">
-        <h1 style="font-size: 3em; font-weight: bold; color: #fff; margin-bottom: 20px;">Our Blogs</h1>
-        <p style="font-size: 1.2em; color: #ccc; max-width: 800px; margin: 0 auto;">Stay updated with the latest trends and insights in the tech world.</p>
-    </section>
+<!-- Hero Section -->
+<section class="hero relative min-h-[450px] py-10 md:py-20 overflow-hidden text-white bg-[#1a2a44]">
+    <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-no-repeat bg-center bg-cover opacity-40 brightness-75"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle,rgba(255,153,0,0.1)_0%,rgba(26,42,68,0.9)_70%)] z-[-1]"></div>
+    </div>
+    <div class="container mx-auto px-4 py-20 md:px-8 text-center relative z-10">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold uppercase mb-5 text-white animate-fadeIn">Our Blogs</h1>
+        <p class="text-lg sm:text-xl md:text-2xl text-gray-300 leading-relaxed mb-8 max-w-2xl mx-auto">Stay updated with the latest trends, insights, and tips in the tech world.</p>
+    </div>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .animate-fadeIn {
+            animation: fadeIn 2s ease-out;
+        }
+    </style>
+</section>
 
-    <section class="blog-list" style="background-color: #666666; padding: 80px 20px; text-align: center; position: relative; animation: fadeIn 2s ease-out;">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
-                <div style="background-color: #777777; padding: 20px; width: 300px; border-radius: 10px;">
-                    <h3 style="font-size: 1.5em; color: #ffcc00; margin-bottom: 10px;">Blog Post 1</h3>
-                    <p style="font-size: 1em; color: #ccc;">Insights on modern web design trends.</p>
+<!-- Blog List Section -->
+<section class="bg-[#0a0909] py-16 px-4 md:px-10 lg:px-20 border-t border-[#1a2a44]">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Blog Posts -->
+        <div class="lg:col-span-2">
+            <div class="grid grid-cols-1 gap-8">
+                <!-- Blog Post 1 -->
+                <div class="bg-[#1c1c1c] rounded-xl shadow-md p-4 hover:scale-105 transition-transform duration-300">
+                    <img src="{% static 'images/blog1.jpg' %}" alt="Blog 1" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-[#ffcc00] mb-2">Modern Web Design Trends for 2025</h3>
+                    <p class="text-sm text-gray-300 mb-4">Explore the latest design trends shaping the future of web experiences.</p>
+                    <a href="#" class="text-[#ffcc00] font-bold text-sm hover:underline">Read More</a>
                 </div>
-                <div style="background-color: #777777; padding: 20px; width: 300px; border-radius: 10px;">
-                    <h3 style="font-size: 1.5em; color: #ffcc00; margin-bottom: 10px;">Blog Post 2</h3>
-                    <p style="font-size: 1em; color: #ccc;">The future of E-commerce development.</p>
+                <!-- Blog Post 2 -->
+                <div class="bg-[#1c1c1c] rounded-xl shadow-md p-4 hover:scale-105 transition-transform duration-300">
+                    <img src="{% static 'images/blog2.jpg' %}" alt="Blog 2" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-[#ffcc00] mb-2">The Future of E-commerce Development</h3>
+                    <p class="text-sm text-gray-300 mb-4">How AI and automation are transforming online shopping platforms.</p>
+                    <a href="#" class="text-[#ffcc00] font-bold text-sm hover:underline">Read More</a>
+                </div>
+                <!-- Blog Post 3 -->
+                <div class="bg-[#1c1c1c] rounded-xl shadow-md p-4 hover:scale-105 transition-transform duration-300">
+                    <img src="{% static 'images/blog3.jpg' %}" alt="Blog 3" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-[#ffcc00] mb-2">Why Django is Perfect for Startups</h3>
+                    <p class="text-sm text-gray-300 mb-4">Discover the benefits of using Django for rapid development.</p>
+                    <a href="#" class="text-[#ffcc00] font-bold text-sm hover:underline">Read More</a>
                 </div>
             </div>
+            <!-- Pagination -->
+            <div class="mt-8 flex justify-center gap-4">
+                <a href="#" class="bg-[#ffcc00] text-black px-4 py-2 rounded-lg hover:bg-[#e6b800]">Previous</a>
+                <a href="#" class="bg-[#ffcc00] text-black px-4 py-2 rounded-lg hover:bg-[#e6b800]">Next</a>
+            </div>
         </div>
-        <style>
-            @keyframes fadeIn {
-                from { opacity: 0; }
-                to { opacity: 1; }
-            }
-            .blog-list::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: linear-gradient(to right, #666666, #777777);
-                opacity: 0.1;
-                z-index: -1;
-            }
-        </style>
-    </section>
+        <!-- Sidebar -->
+        <div class="bg-[#1c1c1c] rounded-xl p-6">
+            <h3 class="text-xl font-semibold text-[#ffcc00] mb-4">Categories</h3>
+            <ul class="text-gray-300 text-sm space-y-2">
+                <li><a href="#" class="hover:text-[#ffcc00]">Web Development</a></li>
+                <li><a href="#" class="hover:text-[#ffcc00]">Web Design</a></li>
+                <li><a href="#" class="hover:text-[#ffcc00]">E-commerce</a></li>
+                <li><a href="#" class="hover:text-[#ffcc00]">Digital Marketing</a></li>
+                <li><a href="#" class="hover:text-[#ffcc00]">Technology Trends</a></li>
+            </ul>
+            <h3 class="text-xl font-semibold text-[#ffcc00] mt-8 mb-4">Recent Posts</h3>
+            <ul class="text-gray-300 text-sm space-y-2">
+                <li><a href="#" class="hover:text-[#ffcc00]">SEO Strategies for 2025</a></li>
+                <li><a href="#" class="hover:text-[#ffcc00]">React vs. Vue: A Comparison</a></li>
+                <li><a href="#" class="hover:text-[#ffcc00]">Building Scalable Web Apps</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
 {% endblock %}
-
 {% block footer %}
     {% include 'footer.html' %}
+
 {% endblock %}

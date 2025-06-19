@@ -4,22 +4,103 @@
 {% block title %}About - Xthive{% endblock %}
 
 {% block content %}
-    <section class="about-hero" style="position: relative; min-height: 400px; padding: 100px 0; background-color: #777777; text-align: center; color: #fff;">
-        <h1 style="font-size: 3em; font-weight: bold; color: #fff; margin-bottom: 20px;">About Us</h1>
-        <p style="font-size: 1.2em; color: #ccc; max-width: 800px; margin: 0 auto;">Learn more about our journey and commitment to excellence.</p>
-    </section>
+<!-- Hero Section -->
+<section class="hero relative min-h-[450px] py-10 md:py-20 overflow-hidden text-white bg-[#1a2a44]">
+    <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-no-repeat bg-center bg-cover opacity-40 brightness-75"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle,rgba(255,153,0,0.1)_0%,rgba(26,42,68,0.9)_70%)] z-[-1]"></div>
+    </div>
+    <div class="container mx-auto px-4 py-20 md:px-8 text-center relative z-10">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold uppercase mb-5 text-white animate-fadeIn">About Xthive</h1>
+        <p class="text-lg sm:text-xl md:text-2xl text-gray-300 leading-relaxed mb-8 max-w-2xl mx-auto">Discover our journey, passion, and commitment to transforming businesses through innovative technology.</p>
+    </div>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .animate-fadeIn {
+            animation: fadeIn 2s ease-out;
+        }
+    </style>
+</section>
 
-    <section class="about-content" style="background-color: #888888; padding: 80px 20px; text-align: center; position: relative; animation: slideIn 1.5s ease-out;">
-        <p style="font-size: 1.2em; color: #ccc; max-width: 800px; margin: 0 auto 40px auto;">Xthive is a London-based tech agency with a passion for innovation, delivering top-notch digital solutions since 2010.</p>
-        <style>
-            @keyframes slideIn {
-                from { transform: translateX(-50px); opacity: 0; }
-                to { transform: translateX(0); opacity: 1; }
-            }
-        </style>
-    </section>
+<!-- Our Story Section -->
+<section class="bg-[#0a0909] py-16 px-4 md:px-10 lg:px-20 text-left border-t border-[#1a2a44]" style="animation: slideUp 1.5s ease-out;">
+    <div class="max-w-6xl mx-auto">
+        <span class="text-[#ffcc00] text-base font-medium block mb-2">- Our Journey</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Who We Are</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div>
+                <p class="text-lg text-gray-300 mb-4 leading-relaxed">Founded in 2010 in London, Xthive is a premier tech agency dedicated to delivering cutting-edge digital solutions. Our team of over 50 experts specializes in web design, development, e-commerce, and digital marketing, serving clients across the globe.</p>
+                <p class="text-lg text-gray-300 mb-4 leading-relaxed">From startups to Fortune 500 companies, we’ve empowered businesses with innovative technology, blending creativity with functionality to create impactful digital experiences. Our commitment to excellence has earned us multiple awards and a reputation for reliability.</p>
+            </div>
+            <div>
+                <img src="{% static 'images/team-work.jpg' %}" alt="Team Collaboration" class="w-full h-[300px] object-cover rounded-lg">
+            </div>
+        </div>
+    </div>
+    <style>
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</section>
+
+<!-- Mission & Vision Section -->
+<section class="bg-[#121212] py-16 px-4 md:px-10 lg:px-20">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-[#1c1c1c] rounded-xl p-6 shadow-lg">
+            <h3 class="text-xl font-semibold text-[#ffcc00] mb-4">Our Mission</h3>
+            <p class="text-gray-300 text-base leading-relaxed">To empower businesses with innovative, scalable, and user-centric digital solutions that drive growth and success in the modern world.</p>
+        </div>
+        <div class="bg-[#1c1c1c] rounded-xl p-6 shadow-lg">
+            <h3 class="text-xl font-semibold text-[#ffcc00] mb-4">Our Vision</h3>
+            <p class="text-gray-300 text-base leading-relaxed">To be the global leader in transformative technology, shaping the future of digital experiences with creativity and excellence.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section class="bg-[#0a0909] py-16 px-4 md:px-10 lg:px-20 text-center border-t border-[#1a2a44]">
+    <span class="text-[#ffcc00] text-base font-medium block mb-2">- Meet Our Experts</span>
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">Our Team</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div class="bg-[#1c1c1c] rounded-xl p-4 shadow-md hover:scale-105 transition-transform duration-300">
+            <img src="{% static 'images/team1.jpg' %}" alt="Team Member 1" class="w-full h-48 object-cover rounded-md mb-4">
+            <h3 class="text-lg font-semibold text-white mb-2">John Doe</h3>
+            <p class="text-sm text-gray-300">Lead Developer</p>
+        </div>
+        <div class="bg-[#1c1c1c] rounded-xl p-4 shadow-md hover:scale-105 transition-transform duration-300">
+            <img src="{% static 'images/team2.jpg' %}" alt="Team Member 2" class="w-full h-48 object-cover rounded-md mb-4">
+            <h3 class="text-lg font-semibold text-white mb-2">Jane Smith</h3>
+            <p class="text-sm text-gray-300">UI/UX Designer</p>
+        </div>
+        <div class="bg-[#1c1c1c] rounded-xl p-4 shadow-md hover:scale-105 transition-transform duration-300">
+            <img src="{% static 'images/team3.jpg' %}" alt="Team Member 3" class="w-full h-48 object-cover rounded-md mb-4">
+            <h3 class="text-lg font-semibold text-white mb-2">Michael Lee</h3>
+            <p class="text-sm text-gray-300">Project Manager</p>
+        </div>
+        <div class="bg-[#1c1c1c] rounded-xl p-4 shadow-md hover:scale-105 transition-transform duration-300">
+            <img src="{% static 'images/team4.jpg' %}" alt="Team Member 4" class="w-full h-48 object-cover rounded-md mb-4">
+            <h3 class="text-lg font-semibold text-white mb-2">Sarah Brown</h3>
+            <p class="text-sm text-gray-300">Marketing Specialist</p>
+        </div>
+    </div>
+    <div class="text-center mt-12">
+        <a href="{% url 'career' %}" class="inline-block bg-[#ffcc00] text-black font-bold text-lg py-3 px-8 rounded-lg transition duration-300 hover:bg-[#e6b800] hover:scale-105">Join Our Team</a>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="bg-[#1a2a44] py-16 px-4 md:px-10 lg:px-20 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+    <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">Partner with Xthive to create digital solutions that drive success.</p>
+    <a href="{% url 'contact' %}" class="inline-block bg-[#ffcc00] text-black font-bold text-lg py-3 px-8 rounded-lg transition duration-300 hover:bg-[#e6b800] hover:scale-105">Get in Touch</a>
+</section>
 {% endblock %}
-
 {% block footer %}
     {% include 'footer.html' %}
+
 {% endblock %}

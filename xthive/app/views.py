@@ -10,7 +10,7 @@ def portfolio(request):
     return render(request, 'portfolio.html')
 
 def blog(request):
-    return render(request, 'blogs.html')
+    return render(request, 'blog.html')
 
 def about(request):
     return render(request, 'about.html')

@@ -4,53 +4,115 @@
 {% block title %}Services - Xthive{% endblock %}
 
 {% block content %}
-    <section class="services-hero" style="position: relative; min-height: 400px; padding: 100px 0; background-color: #2a2a2a; text-align: center; color: #fff;">
-        <h1 style="font-size: 3em; font-weight: bold; color: #fff; margin-bottom: 20px;">Our Services</h1>
-        <p style="font-size: 1.2em; color: #ccc; max-width: 800px; margin: 0 auto;">Explore our comprehensive range of digital solutions designed to elevate your business.</p>
-    </section>
+<!-- Hero Section -->
+<section class="hero relative min-h-[450px] py-10 md:py-20 overflow-hidden text-white bg-[#1a2a44]">
+    <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-no-repeat bg-center bg-cover opacity-40 brightness-75"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle,rgba(255,153,0,0.1)_0%,rgba(26,42,68,0.9)_70%)] z-[-1]"></div>
+    </div>
+    <div class="container mx-auto px-4 py-20 md:px-8 text-center relative z-10">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold uppercase mb-5 text-white animate-fadeIn">Our Services</h1>
+        <p class="text-lg sm:text-xl md:text-2xl text-gray-300 leading-relaxed mb-8 max-w-2xl mx-auto">Comprehensive digital solutions to elevate your business to new heights.</p>
+    </div>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .animate-fadeIn {
+            animation: fadeIn 2s ease-out;
+        }
+    </style>
+</section>
 
-    <section class="service-list" style="background-color: #333333; padding: 80px 20px; text-align: center; position: relative; animation: fadeIn 2s ease-out;">
-        <div style="max-width: 800px; margin: 0 auto;">
-            <h2 style="font-size: 2.5em; color: #fff; margin-bottom: 40px;">What We Offer</h2>
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px;">
-                <div style="flex: 1; min-width: 250px; text-align: left;">
-                    <h3 style="font-size: 1.5em; color: #ffcc00; margin-bottom: 10px;">Website Design</h3>
-                    <p style="font-size: 1em; color: #ccc;">Custom, responsive designs tailored to your brand.</p>
-                </div>
-                <div style="flex: 1; min-width: 250px; text-align: left;">
-                    <h3 style="font-size: 1.5em; color: #ffcc00; margin-bottom: 10px;">Web Development</h3>
-                    <p style="font-size: 1em; color: #ccc;">Robust and scalable web applications.</p>
-                </div>
-                <div style="flex: 1; min-width: 250px; text-align: left;">
-                    <h3 style="font-size: 1.5em; color: #ffcc00; margin-bottom: 10px;">E-commerce</h3>
-                    <p style="font-size: 1em; color: #ccc;">E-commerce platforms with seamless integration.</p>
-                </div>
-                <div style="flex: 1; min-width: 250px; text-align: left;">
-                    <h3 style="font-size: 1.5em; color: #ffcc00; margin-bottom: 10px;">WordPress</h3>
-                    <p style="font-size: 1em; color: #ccc;">Custom WordPress solutions for your needs.</p>
-                </div>
+<!-- Services List -->
+<section class="bg-[#0a0909] py-16 px-4 md:px-10 lg:px-20 border-t border-[#1a2a44]">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-12 text-center">What We Offer</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service 1 -->
+            <div class="bg-[#1c1c1c] rounded-xl p-6 shadow-md hover:shadow-[#ffcc00]/50 transition duration-300">
+                <img src="https://img.icons8.com/ios-filled/50/ffcc00/globe.png" alt="Web Design" class="mx-auto mb-4 w-12 h-12">
+                <h3 class="text-xl font-semibold text-white mb-2">Website Design</h3>
+                <p class="text-gray-300 text-sm leading-relaxed">Custom, responsive, and visually stunning designs tailored to your brand identity.</p>
+            </div>
+            <!-- Service 2 -->
+            <div class="bg-[#1c1c1c] rounded-xl p-6 shadow-md hover:shadow-[#ffcc00]/50 transition duration-300">
+                <img src="https://img.icons8.com/ios-filled/50/ffcc00/code.png" alt="Web Development" class="mx-auto mb-4 w-12 h-12">
+                <h3 class="text-xl font-semibold text-white mb-2">Web Development</h3>
+                <p class="text-gray-300 text-sm leading-relaxed">Robust, scalable web applications built with modern frameworks like Django and React.</p>
+            </div>
+            <!-- Service 3 -->
+            <div class="bg-[#1c1c1c] rounded-xl p-6 shadow-md hover:shadow-[#ffcc00]/50 transition duration-300">
+                <img src="https://img.icons8.com/ios-filled/50/ffcc00/shopping-cart.png" alt="E-commerce" class="mx-auto mb-4 w-12 h-12">
+                <h3 class="text-xl font-semibold text-white mb-2">E-commerce</h3>
+                <p class="text-gray-300 text-sm leading-relaxed">Seamless online stores with Shopify, WooCommerce, and custom solutions.</p>
+            </div>
+            <!-- Service 4 -->
+            <div class="bg-[#1c1c1c] rounded-xl p-6 shadow-md hover:shadow-[#ffcc00]/50 transition duration-300">
+                <img src="https://img.icons8.com/ios-filled/50/ffcc00/wordpress.png" alt="WordPress" class="mx-auto mb-4 w-12 h-12">
+                <h3 class="text-xl font-semibold text-white mb-2">WordPress</h3>
+                <p class="text-gray-300 text-sm leading-relaxed">Custom WordPress themes and plugins for flexible, user-friendly websites.</p>
+            </div>
+            <!-- Service 5 -->
+            <div class="bg-[#1c1c1c] rounded-xl p-6 shadow-md hover:shadow-[#ffcc00]/50 transition duration-300">
+                <img src="https://img.icons8.com/ios-filled/50/ffcc00/search.png" alt="SEO" class="mx-auto mb-4 w-12 h-12">
+                <h3 class="text-xl font-semibold text-white mb-2">SEO Services</h3>
+                <p class="text-gray-300 text-sm leading-relaxed">Optimize your site for search engines to drive traffic and conversions.</p>
+            </div>
+            <!-- Service 6 -->
+            <div class="bg-[#1c1c1c] rounded-xl p-6 shadow-md hover:shadow-[#ffcc00]/50 transition duration-300">
+                <img src="https://img.icons8.com/ios-filled/50/ffcc00/phone.png" alt="Mobile Apps" class="mx-auto mb-4 w-12 h-12">
+                <h3 class="text-xl font-semibold text-white mb-2">Mobile App Development</h3>
+                <p class="text-gray-300 text-sm leading-relaxed">Native and cross-platform apps with React Native and Flutter.</p>
             </div>
         </div>
-        <style>
-            @keyframes fadeIn {
-                from { opacity: 0; }
-                to { opacity: 1; }
-            }
-            .service-list::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: linear-gradient(to right, #333333, #404040);
-                opacity: 0.1;
-                z-index: -1;
-            }
-        </style>
-    </section>
-{% endblock %}
+    </div>
+</section>
 
+<!-- Technology Stack -->
+<section class="bg-[#121212] py-16 px-4 md:px-10 lg:px-20">
+    <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">Our Technology Stack</h2>
+        <div class="relative overflow-hidden h-20">
+            <div class="absolute whitespace-nowrap animate-flow flex gap-10 items-center">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-10 h-10" alt="HTML5">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-10 h-10" alt="CSS3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-10 h-10" alt="JavaScript">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-10 h-10" alt="React">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-10 h-10" alt="Python">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="w-10 h-10" alt="PHP">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" class="w-10 h-10" alt="WordPress">
+                <!-- Duplicate icons for seamless loop -->
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-10 h-10" alt="HTML5">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-10 h-10" alt="CSS3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-10 h-10" alt="JavaScript">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-10 h-10" alt="React">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-10 h-10" alt="Python">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="w-10 h-10" alt="PHP">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" class="w-10 h-10" alt="WordPress">
+            </div>
+        </div>
+    </div>
+    <style>
+        @keyframes flow {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+        .animate-flow {
+            animation: flow 25s linear infinite;
+        }
+    </style>
+</section>
+
+<!-- Call to Action -->
+<section class="bg-[#1a2a44] py-16 px-4 md:px-10 lg:px-20 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Start Your Project?</h2>
+    <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">Let’s build something amazing together.</p>
+    <a href="{% url 'contact' %}" class="inline-block bg-[#ffcc00] text-black font-bold text-lg py-3 px-8 rounded-lg transition duration-300 hover:bg-[#e6b800] hover:scale-105">Get Started</a>
+</section>
+{% endblock %}
 {% block footer %}
     {% include 'footer.html' %}
+
 {% endblock %}
