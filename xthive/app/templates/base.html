@@ -62,6 +62,31 @@
             margin-top: 20px;
         }
 
+        /* WhatsApp Button Styles */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .whatsapp-btn:hover {
+            background-color: #1EBE54;
+            transform: scale(1.1);
+        }
+        .whatsapp-btn i {
+            font-size: 30px;
+        }
+
         /* Responsive Styles */
         @media (max-width: 768px) {
             nav {
@@ -70,7 +95,7 @@
                 top: 70px;
                 right: 0;
                 background-color: #1a2a44;
-                width: 33%; /* Fixed width of 39% */
+                width: 33%;
                 padding: 20px;
                 flex-direction: column;
                 gap: 15px;
@@ -83,8 +108,15 @@
                 display: flex;
             }
             nav a {
-                text-align: left; /* Align links to the left inside the dropdown */
-                margin: 10px 0; /* Added vertical spacing between links */
+                text-align: left;
+                margin: 10px 0;
+            }
+            .whatsapp-btn {
+                width: 50px;
+                height: 50px;
+            }
+            .whatsapp-btn i {
+                font-size: 24px;
             }
         }
     </style>
@@ -115,6 +147,11 @@
     <footer>
         {% block footer %}{% endblock %}
     </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/1234567890?text=Hello%20Xthive,%20I%20have%20a%20query!" target="_blank" class="whatsapp-btn">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <script>
         const menuToggle = document.getElementById('menu-toggle');
