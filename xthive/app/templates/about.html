@@ -95,13 +95,13 @@
     <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">Our Leadership</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
         <div class="bg-[#1c1c1c] rounded-xl p-4 shadow-md hover:scale-105 transition-transform duration-300">
-            <img src="{% static 'images/talha.png' %}" alt="M. Talha" class="w-full h-48 object-cover rounded-md mb-4">
+            <img src="{% static 'images/talha.png' %}" alt="M. Talha" class="w-full max-h-64 object-contain rounded-md mb-4">
             <h3 class="text-lg font-semibold text-white mb-2">M. Talha</h3>
             <p class="text-sm text-[#ffcc00] mb-2">Co-Founder & CEO</p>
             <p class="text-sm text-gray-300">A visionary leader driving Xthive’s mission to transform businesses with innovative tech solutions.</p>
         </div>
         <div class="bg-[#1c1c1c] rounded-xl p-4 shadow-md hover:scale-105 transition-transform duration-300">
-            <img src="{% static 'images/abdulrehman.png' %}" alt="Abdulrehman" class="w-full h-48 object-cover rounded-md mb-4">
+            <img src="{% static 'images/abdulrehman.png' %}" alt="Abdulrehman" class="w-full max-h-64 object-contain rounded-md mb-4">
             <h3 class="text-lg font-semibold text-white mb-2">Abdulrehman</h3>
             <p class="text-sm text-[#ffcc00] mb-2">Co-Founder & CTO</p>
             <p class="text-sm text-gray-300">A tech genius architecting Xthive’s cutting-edge platforms and ensuring technical excellence.</p>
@@ -112,48 +112,8 @@
     </div>
 </section>
 
-<!-- Milestones Section
-<section class="bg-[#121212] py-16 px-4 md:px-10 lg:px-20">
-    <div class="max-w-6xl mx-auto text-center">
-        <span class="text-[#ffcc00] text-base font-medium block mb-2">- Our Achievements</span>
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">Our Milestones</h2>
-        <div class="relative">
-            <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-[#ffcc00] opacity-50"></div>
-            <div class="space-y-12">
-                <div class="flex flex-col md:flex-row items-center md:odd:flex-row-reverse">
-                    <div class="md:w-1/2 text-left md:pr-8">
-                        <h3 class="text-lg font-semibold text-white mb-2">Founded Xthive</h3>
-                        <p class="text-sm text-gray-300">M. Talha and Abdulrehman launched Xthive with a vision to revolutionize tech solutions.</p>
-                    </div>
-                    <div class="md:w-1/2 text-right md:pl-8">
-                        <span class="text-[#ffcc00] font-bold">2023</span>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center md:odd:flex-row-reverse">
-                    <div class="md:w-1/2 text-left md:pr-8">
-                        <h3 class="text-lg font-semibold text-white mb-2">First Major Client</h3>
-                        <p class="text-sm text-gray-300">Secured our first major client, delivering a game-changing digital platform.</p>
-                    </div>
-                    <div class="md:w-1/2 text-right md:pl-8">
-                        <span class="text-[#ffcc00] font-bold">2024</span>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center md:odd:flex-row-reverse">
-                    <div class="md:w-1/2 text-left md:pr-8">
-                        <h3 class="text-lg font-semibold text-white mb-2">Global Expansion</h3>
-                        <p class="text-sm text-gray-300">Expanded our services to clients across multiple continents.</p>
-                    </div>
-                    <div class="md:w-1/2 text-right md:pl-8">
-                        <span class="text-[#ffcc00] font-bold">2025</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-
 <!-- Call to Action -->
-<section class="bg-[#1a2a44] py-16 px-4 md:px-10 lg:px-20 text-center">
+<section class="bg-[#0a0909] py-16 px-4 md:px-10 lg:px-20 text-center border-t border-[#1a2a44]">
     <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Build the Future with Us?</h2>
     <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">Join Xthive’s journey to create impactful digital solutions that drive success.</p>
     <a href="{% url 'contact' %}" class="inline-block bg-[#ffcc00] text-black font-bold text-lg py-3 px-8 rounded-lg transition duration-300 hover:bg-[#e6b800] hover:scale-105">Get in Touch</a>
