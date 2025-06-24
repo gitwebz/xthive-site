@@ -37,7 +37,7 @@
                 <p class="text-lg text-gray-300 mb-4 leading-relaxed">From web development to AI-driven tools, we’re committed to pushing boundaries and helping our clients succeed in a fast-evolving digital landscape.</p>
             </div>
             <div>
-                <img src="{% static 'images/team.jpeg' %}" alt="Team Collaboration" class="w-full h-[300px] object-cover rounded-lg">
+                <img src="{% static 'images/team1.jpg' %}" alt="Team Collaboration" class="w-full h-[300px] object-cover rounded-lg">
             </div>
         </div>
     </div>
@@ -49,17 +49,30 @@
     </style>
 </section>
 
-<!-- Mission & Vision Section -->
-<section class="bg-[#121212] py-16 px-4 md:px-10 lg:px-20">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-[#1c1c1c] rounded-xl p-6 shadow-lg">
-            <h3 class="text-xl font-semibold text-[#ffcc00] mb-4">Our Mission</h3>
-            <p class="text-gray-300 text-base leading-relaxed">To deliver innovative, scalable, and user-focused tech solutions that empower businesses to thrive in the digital age.</p>
+<!-- Team Section -->
+<section class="bg-[#0a0909] py-16 px-4 md:px-10 lg:px-20 text-center border-t border-[#1a2a44]">
+    <span class="text-[#ffcc00] text-base font-medium block mb-2">- Meet Our Founders</span>
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">Our Leadership</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="bg-[#1c1c1c] rounded-xl p-4 shadow-md hover:scale-105 transition-transform duration-300">
+            <div class="w-48 h-48 mx-auto overflow-hidden rounded-full">
+                <img src="{% static 'images/talha.png' %}" alt="M. Talha" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-lg font-semibold text-white mb-2">M. Talha</h3>
+            <p class="text-sm text-[#ffcc00] mb-2">Co-Founder & CEO</p>
+            <p class="text-sm text-gray-300">A visionary leader driving Xthive’s mission to transform businesses with innovative tech solutions.</p>
         </div>
-        <div class="bg-[#1c1c1c] rounded-xl p-6 shadow-lg">
-            <h3 class="text-xl font-semibold text-[#ffcc00] mb-4">Our Vision</h3>
-            <p class="text-gray-300 text-base leading-relaxed">To lead the global tech landscape by creating transformative digital experiences that inspire and innovate.</p>
+        <div class="bg-[#1c1c1c] rounded-xl p-4 shadow-md hover:scale-105 transition-transform duration-300">
+            <div class="w-48 h-48 mx-auto overflow-hidden rounded-full">
+                <img src="{% static 'images/abdulrehman.png' %}" alt="Abdulrehman" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-lg font-semibold text-white mb-2">Abdulrehman</h3>
+            <p class="text-sm text-[#ffcc00] mb-2">Co-Founder & CTO</p>
+            <p class="text-sm text-gray-300">A tech genius architecting Xthive’s cutting-edge platforms and ensuring technical excellence.</p>
         </div>
+    </div>
+    <div class="text-center mt-12">
+        <a href="{% url 'career' %}" class="inline-block bg-[#ffcc00] text-black font-bold text-lg py-3 px-8 rounded-lg transition duration-300 hover:bg-[#e6b800] hover:scale-105">Join Our Team</a>
     </div>
 </section>
 
@@ -89,28 +102,23 @@
     </div>
 </section>
 
-<!-- Team Section -->
-<section class="bg-[#0a0909] py-16 px-4 md:px-10 lg:px-20 text-center border-t border-[#1a2a44]">
-    <span class="text-[#ffcc00] text-base font-medium block mb-2">- Meet Our Founders</span>
-    <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">Our Leadership</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        <div class="bg-[#1c1c1c] rounded-xl p-4 shadow-md hover:scale-105 transition-transform duration-300">
-            <img src="{% static 'images/talha.png' %}" alt="M. Talha" class="w-full max-h-64 object-contain rounded-md mb-4">
-            <h3 class="text-lg font-semibold text-white mb-2">M. Talha</h3>
-            <p class="text-sm text-[#ffcc00] mb-2">Co-Founder & CEO</p>
-            <p class="text-sm text-gray-300">A visionary leader driving Xthive’s mission to transform businesses with innovative tech solutions.</p>
+<!-- Mission & Vision Section -->
+<section class="bg-[#121212] py-16 px-4 md:px-10 lg:px-20">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-[#1c1c1c] rounded-xl p-6 shadow-lg">
+            <h3 class="text-xl font-semibold text-[#ffcc00] mb-4">Our Mission</h3>
+            <p class="text-gray-300 text-base leading-relaxed">To deliver innovative, scalable, and user-focused tech solutions that empower businesses to thrive in the digital age.</p>
         </div>
-        <div class="bg-[#1c1c1c] rounded-xl p-4 shadow-md hover:scale-105 transition-transform duration-300">
-            <img src="{% static 'images/abdulrehman.png' %}" alt="Abdulrehman" class="w-full max-h-64 object-contain rounded-md mb-4">
-            <h3 class="text-lg font-semibold text-white mb-2">Abdulrehman</h3>
-            <p class="text-sm text-[#ffcc00] mb-2">Co-Founder & CTO</p>
-            <p class="text-sm text-gray-300">A tech genius architecting Xthive’s cutting-edge platforms and ensuring technical excellence.</p>
+        <div class="bg-[#1c1c1c] rounded-xl p-6 shadow-lg">
+            <h3 class="text-xl font-semibold text-[#ffcc00] mb-4">Our Vision</h3>
+            <p class="text-gray-300 text-base leading-relaxed">To lead the global tech landscape by creating transformative digital experiences that inspire and innovate.</p>
         </div>
-    </div>
-    <div class="text-center mt-12">
-        <a href="{% url 'career' %}" class="inline-block bg-[#ffcc00] text-black font-bold text-lg py-3 px-8 rounded-lg transition duration-300 hover:bg-[#e6b800] hover:scale-105">Join Our Team</a>
     </div>
 </section>
+
+
+
+
 
 <!-- Call to Action -->
 <section class="bg-[#0a0909] py-16 px-4 md:px-10 lg:px-20 text-center border-t border-[#1a2a44]">
